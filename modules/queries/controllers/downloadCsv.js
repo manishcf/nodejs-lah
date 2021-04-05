@@ -21,8 +21,6 @@ module.exports = (req, res) => {
           res.download("public/", "data.csv");
         })
         .pipe(res);
-
-      setTimeout(() => {}, 3000);
     })
     .catch((e) => {
       res.status(400).send(e);
