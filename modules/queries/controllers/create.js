@@ -1,7 +1,9 @@
 const Query = require("../model");
 
 module.exports = (req, res) => {
-  const { query = "{}" } = req.body || {};
+  const { query } = req.body || {};
+
+    // console.log("Body", JSON.parse(req.body.query))
 
   new Query(JSON.parse(query))
     .save()
